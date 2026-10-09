@@ -1,0 +1,41 @@
+Infrastructure for two tier architecture with terraform
+
+1. Networking & Core Infrastructure
+Amazon VPC & Subnets: A custom Virtual Private Cloud configured with public subnets for edge/load-balancing components and private subnets for application and database tiers.   
+ 
+
+Route Tables & Gateways: Routing configuration to direct external traffic and isolate internal application resources.   
+ 
+
+2. Compute & Load Balancing (Web/App Tier)
+Application Load Balancer (ALB): Distributes incoming web traffic across your compute instances.   
+ 
+
+Amazon EC2 Instances: Virtual servers that run the core application tier.   
+ 
+
+Auto Scaling Group (ASG): Automatically scales the EC2 instance count up or down based on traffic demands.   
+ 
+
+3. Database & Storage (Data Tier)
+Amazon RDS: A managed relational database instance deployed inside the private subnets to handle persistent data securely.   
+ 
+
+Amazon S3 Buckets: Object storage provisioned for static application assets or files.   
+ 
+
+4. Edge Delivery, DNS & Security
+Amazon CloudFront: A Content Delivery Network (CDN) distribution to cache and accelerate content delivery globally.   
+ 
+
+Amazon Route 53: Hosted zones and DNS records to route traffic to the CloudFront distribution and load balancer.   
+ 
+
+AWS Certificate Manager (ACM): SSL/TLS certificates to enable HTTPS encryption across your domain.   
+ 
+
+AWS WAF: Web Application Firewall rules attached to inspect and block malicious web requests.   
+ 
+
+AWS IAM: Fine-grained roles and policies granting minimal necessary permissions to AWS resources and instances.   
+ 
