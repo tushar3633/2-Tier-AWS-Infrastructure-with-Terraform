@@ -1,0 +1,7 @@
+**/.terraform/
+.terraform/
+*.tfstate
+*.tfstate.*
+terra-key-ec2
+*.pem
+terraform.tf
